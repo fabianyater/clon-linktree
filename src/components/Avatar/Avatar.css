@@ -1,0 +1,23 @@
+.profile{
+  text-align: center;
+}
+
+.image{
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.text{
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+  line-height: 28px;
+}
+
+.title{
+  font-size: 1.7rem;
+}
+
+.subtitle{
+  font-size: 1rem;
+}

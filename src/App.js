@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { Avatar } from './components/Avatar/Avatar';
+import { Link } from './components/Links/Link';
+import { Links } from './utils/links';
+import { User } from './utils/user';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='container'>
+        <header>
+          <Avatar
+            img={User.image}
+            fullname={User.name}
+            username={User.username}
+            description={User.description}
+          />
+        </header>
+        <main>
+          <ul>
+            {Links.map((item) => {
+              return (
+                <li>
+                  <Link
+                    key={item.id}
+                    image={item.icon}
+                    name={item.name}
+                    link={item.link}
+                    alt=""
+                  ></Link>
+                </li>
+              );
+            })}
+          </ul>
+        </main>
+      </div>
+    </>
   );
 }
 
