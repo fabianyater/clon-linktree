@@ -1,4 +1,5 @@
-import './App.css'
+import styles from './App.module.css'
+
 import { Avatar } from './components/Avatar/Avatar';
 import { Link } from './components/Links/Link';
 import { Links } from './utils/links';
@@ -7,8 +8,8 @@ import { User } from './utils/user';
 function App() {
   return (
     <>
-      <div className='container'>
-        <header>
+      <div className={styles.container}>
+        <header className={styles.header}>
           <Avatar
             img={User.image}
             fullname={User.name}
@@ -17,10 +18,10 @@ function App() {
           />
         </header>
         <main>
-          <ul>
+          <ul className={styles.list}>
             {Links.map((item) => {
               return (
-                <li>
+                <li className={styles.listItem}>
                   <Link
                     key={item.id}
                     image={item.icon}

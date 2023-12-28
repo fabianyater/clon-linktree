@@ -1,11 +1,11 @@
 import React from 'react';
-import './Link.css'
+import styles from './Link.module.css'
 
 export const Link = ({ image, name, link, alt }) => {
   return (
-    <a href={link} target='_blank' rel='noreferrer' className='link_container'>
-      <img src={image} className='logo' alt={alt} />
-      <h1 className='link_name'>{name}</h1>
+    <a href={link} target='_blank' rel='noreferrer' className={styles.linkContainer}>
+      <img src={image} className={styles.logo} alt={alt} />
+      <h1 className={styles.linkName}>{name}</h1>
     </a>
   )
 }

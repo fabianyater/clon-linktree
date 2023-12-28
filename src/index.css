@@ -1,0 +1,26 @@
+:root {
+  --hover-backgound-color: #f7f7f7;
+  --border-color: #fff;
+  --text-color: #fff;
+  --text-hover-color: #1a1a1a;
+  --background-color: #1a1a1a;
+}
+
+/* [data-theme="dark"] {
+  --background-color: #171717;
+  --text-color: #ffffff;
+  --button-color: #fff
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  background: var(--background-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Karla', sans-serif;
+}

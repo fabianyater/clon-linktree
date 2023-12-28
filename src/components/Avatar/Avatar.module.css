@@ -8,10 +8,7 @@
 }
 
 .text{
-  color: #fff;
-  font-weight: bold;
-  font-family: 'Karla', sans-serif;
-  line-height: 28px;
+  color: var(--text-color);
 }
 
 .title{
@@ -20,4 +17,8 @@
 
 .subtitle{
   font-size: 1rem;
+}
+
+.description {
+  margin-top: 20px;
 }
