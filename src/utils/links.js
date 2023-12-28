@@ -1,34 +1,24 @@
-import { dribbleLogo, facebookLogo, githubLogo, instagramLogo, linkedinLogo } from "../images";
+import instagram from "../images/icons/Instagram.svg";
+import github from "../images/icons/github.svg";
+import linkedin from "../images/icons/linkedin.svg";
 
 export const Links = [
   {
-    id: 1,
-    name: 'Facebook',
-    icon: facebookLogo,
-    link: 'http://www.facebook.com/f.yater/',
-  },
-  {
     id: 2,
     name: 'Linkedin',
-    icon: linkedinLogo,
-    link: 'http://www.linkedin.com/in/fabianyr/',
+    icon: linkedin,
+    link: 'https://www.linkedin.com/in/stefanycm/',
   },
   {
     id: 3,
     name: 'GitHub',
-    icon: githubLogo,
-    link: 'http://www.github.com/fabianyater',
+    icon: github,
+    link: 'https://github.com/stefacm',
   },
   {
     id: 4,
     name: 'Instagram',
-    icon: instagramLogo,
-    link: 'http://www.instagram.com/fabian_yate/',
-  },
-  {
-    id: 5,
-    name: 'Dribbble',
-    icon: dribbleLogo,
-    link: 'http://www.dribbble.com',
+    icon: instagram,
+    link: 'https://www.instagram.com/stefanycm__/',
   },
 ]

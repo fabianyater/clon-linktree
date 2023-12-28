@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Avatar.module.css'
 
-export const Avatar = ({ img, fullname, username, description }) => {
+export const Avatar = ({ fullname, username, description }) => {
   return (
     <div className={styles.profile}>
-      <img src={img} className={styles.image} alt='User avatar' width={96} height={96} loading='lazy' fetchpriority='high' />
+      <img src="https://avatars.githubusercontent.com/u/144021978?v=4" className={styles.image} alt='User avatar' />
       <div>
         <h1 className={`${styles.text} ${styles.title}`}>{fullname}</h1>
         <h2 className={`${styles.text} ${styles.subtitle}`}>{username}</h2>

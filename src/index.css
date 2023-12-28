@@ -4,13 +4,23 @@
   --text-color: #fff;
   --text-hover-color: #1a1a1a;
   --background-color: #1a1a1a;
+  --button-background-color: #fafafa;
+  --button-text-color: #1a1a1a;
+  --filter: invert();
+
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* [data-theme="dark"] {
-  --background-color: #171717;
-  --text-color: #ffffff;
-  --button-color: #fff
-} */
+[data-theme="light"] {
+  --hover-backgound-color: #070707;
+  --border-color: #000;
+  --text-color: #000;
+  --text-hover-color: #fafafa;
+  --background-color: #fafafa;
+  --button-background-color: #1a1a1a;
+  --button-text-color: #fff;
+  --filter: none;
+}
 
 * {
   margin: 0;
@@ -22,5 +32,7 @@ body {
   background: var(--background-color);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

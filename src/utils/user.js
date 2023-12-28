@@ -1,8 +1,6 @@
-import { profileImage } from "../images";
 
 export const User = {
-  name: 'Fabian Yate Ramirez',
-  username: '@fabianyater',
+  name: 'Stefany Cárdenas Martínez',
+  username: '@stefacm',
   description: 'Frontend developer',
-  image: profileImage
 }
