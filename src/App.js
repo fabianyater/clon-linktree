@@ -35,7 +35,7 @@ function App() {
         <div className={styles.bgBottom}>
         </div>
       </div>
-      <div className={styles.container} data-theme={theme}>
+      <div className={styles.container} >
         <Header />
 
         {
