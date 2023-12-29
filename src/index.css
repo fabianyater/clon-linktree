@@ -6,6 +6,9 @@
   --background-color: #00091d;
   --button-background-color: #fafafa;
   --button-text-color: #1a1a1a;
+  --title-text-color: #fff;
+  --input-shadow: rgb(232, 121, 249, 30%);
+  --input-background-color: #c5c9d1;
   --filter: invert();
 
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -17,8 +20,11 @@
   --text-color: #000;
   --text-hover-color: #fafafa;
   --background-color: #fafafa;
-  --button-background-color: #1a1a1a;
+  --button-background-color: #00091d;
   --button-text-color: #fff;
+  --title-text-color: #00091d;
+  --input-shadow: #00091d30;
+  --input-background-color: #fccdee80;
   --filter: none;
 }
 

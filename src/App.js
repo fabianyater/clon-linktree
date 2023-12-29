@@ -1,19 +1,31 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './App.module.css';
 
-import { Avatar } from './components/Avatar/Avatar';
+import AddLinkForm from './components/AddLinkForm/AddLinkForm';
+import Button from './components/Button/Button';
+import Header from './components/Header/Header';
 import { Link } from './components/Links/Link';
-import SvgIcon from './components/SvgIcon/SvgIcon';
 import { useTheme } from './context/ThemeProvider';
-import { Links } from './utils/links';
-import { User } from './utils/user';
+import { handleDeleteLink } from './utils/utils';
 
 function App() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
+  const [links, setLinks] = useState([]);
+  const [showForm, setShowForm] = useState(false)
+
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    setShowForm(false)
+  }, [links]);
+
+  useEffect(() => {
+    const storedLinks = JSON.parse(localStorage.getItem('links') || '[]');
+    setLinks(storedLinks);
+  }, [setLinks]);
 
   return (
     <>
@@ -22,23 +34,28 @@ function App() {
         </div>
       </div>
       <div className={styles.container} data-theme={theme}>
-        <header className={styles.header}>
-          <Avatar
-            fullname={User.name}
-            username={User.username}
-            description={User.description}
-          />
-        </header>
+        <Header />
+
+        <div className={styles.addLink}>
+          <Button text="Agregar enlace" showText fullWidth rounded onClick={() => setShowForm(!showForm)} />
+          <div className={styles.formWrapper}>
+            {
+              showForm &&
+              <AddLinkForm setLinks={setLinks} />
+            }
+          </div>
+        </div>
+
         <main>
           <ul className={styles.list}>
-            {Links.map((item, index) => {
+            {links.map((item, index) => {
               return (
-                <li className={styles.listItem}>
+                <li key={index} className={styles.listItem}>
                   <Link
-                    key={index}
                     icon={item.icon}
                     name={item.name}
-                    link={item.link}
+                    link={item.path}
+                    onClick={() => handleDeleteLink(index, setLinks)}
                     alt=""
                   ></Link>
                 </li>
@@ -46,11 +63,6 @@ function App() {
             })}
           </ul>
         </main>
-        <footer>
-          <button className={styles.button} onClick={toggleTheme}>
-            {theme === 'light' ? <SvgIcon icon={"lightTheme"} /> : <SvgIcon icon={"darkTheme"} />}
-          </button>
-        </footer>
       </div>
     </>
   );

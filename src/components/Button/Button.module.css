@@ -1,0 +1,36 @@
+.button {
+  appearance: button;
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: var(--button-text-color);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  outline: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button[data-theme="light"] {
+  & svg {
+    filter: invert();
+  }
+}
+
+.button[data-full="true"] {
+  width: 100%;
+}
+
+.button[data-rounded="true"] {
+  border-radius: 50px;
+}
+
+.button[data-icon="true"] {
+  padding: 10px;
+}

@@ -16,12 +16,30 @@
   transition: all ease-in-out 0.2s;
 }
 
+.linkContainer svg {
+  filter: var(--filter);
+}
+
 .linkContainer:hover img {
+  filter: none;
+}
+
+.linkContainer:hover svg {
   filter: none;
 }
 
 .linkContainer:hover[data-theme="light"] img {
   filter: invert();
+}
+
+.linkContainer:hover[data-theme="light"] svg {
+  filter: invert();
+}
+
+.linkContainer {
+  & svg {
+    padding-right: 10px;
+  }
 }
 
 .logo {
@@ -42,6 +60,7 @@
   align-items: center;
   justify-content: center;
   padding-right: 20px;
+  text-transform: capitalize;
 }
 
 .linkName:hover {

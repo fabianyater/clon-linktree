@@ -1,33 +1,37 @@
 .container {
+  box-sizing: border-box;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
   gap: 40px;
-}
-
-.header {
-  margin-top: 50px;
+  padding: 0 10px;
 }
 
 main {
   box-sizing: border-box;
   width: 100%;
-  max-width: 720px;
-  padding: 0 10px;
 }
 
 .listItem {
   list-style: none;
 }
 
-.button {
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  background: transparent;
+.addLink {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.formWrapper {
+  width: 100%;
 }
 
 .bgTop {
@@ -41,7 +45,6 @@ main {
     linear-gradient(to bottom, #8080800a 1px, transparent 1px);
   background-size: 14px 24px;
   transition: background-color 0.3s ease, color 0.3s ease;
-
 }
 
 .bgBottom {
