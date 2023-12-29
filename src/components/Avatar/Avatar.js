@@ -25,7 +25,7 @@ export const Avatar = () => {
       <img src={userInfo.picture} className={styles.image} alt='User avatar' />
       <div>
         <h1 className={`${styles.text} ${styles.title}`}>{userInfo.fullname}</h1>
-        <h2 className={`${styles.text} ${styles.subtitle}`}>{userInfo.username}</h2>
+        <h2 className={`${styles.text} ${styles.subtitle}`}>@{userInfo.username}</h2>
         <p className={`${styles.text} ${styles.description}`}>{userInfo.description}</p>
       </div>
       {
