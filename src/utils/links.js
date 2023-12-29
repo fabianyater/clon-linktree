@@ -1,4 +1,4 @@
-import instagram from "../images/icons/Instagram.svg";
+import instagram from "../images/icons/instagram.svg";
 import github from "../images/icons/github.svg";
 import linkedin from "../images/icons/linkedin.svg";
 
