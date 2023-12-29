@@ -16,7 +16,7 @@ function App() {
   }, [theme]);
 
   return (
-    <>
+    <div>
       <div className={styles.bgTop}>
         <div className={styles.bgBottom}>
         </div>
@@ -52,7 +52,7 @@ function App() {
           </button>
         </footer>
       </div>
-    </>
+    </div>
   );
 }
 
