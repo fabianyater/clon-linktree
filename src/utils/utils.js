@@ -1,7 +1,13 @@
-
 export const handleDeleteLink = (linkIndex, setLinks) => {
-  setLinks(links => links.filter((_, index) => index !== linkIndex));
+  setLinks((currentLinks) => {
+    const updatedLinks = currentLinks.filter((_, index) => index !== linkIndex);
+
+    localStorage.setItem('links', JSON.stringify(updatedLinks));
+
+    return updatedLinks;
+  });
 };
+
 
 export const getNameFromUrl = (url) => {
   const parts = url.split("/");
