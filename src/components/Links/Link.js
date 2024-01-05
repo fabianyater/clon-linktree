@@ -7,7 +7,7 @@ import styles from './Link.module.css';
 export const Link = ({ icon, name, link, alt, onClick, isVisible }) => {
   const { theme } = useTheme();
   const [isToggleChecked, setIsToggleChecked] = useState(isVisible);
-  const [isUserLogged, setIsUserLogged] = useState(true);
+  const [isUserLogged] = useState(true);
   const links = JSON.parse(localStorage.getItem("links"));
   const linkObject = links.findIndex((item) => item.name === name)
 
