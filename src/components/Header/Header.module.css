@@ -1,4 +1,26 @@
 .header {
   width: 100%;
   margin-top: 50px;
+
+  .options {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & svg {
+      &:nth-child(2) {
+        filter: invert();
+        cursor: pointer;
+      }
+    }
+  }
+
+  .options[data-theme="light"] {
+    & svg {
+      &:nth-child(2) {
+        filter: none;
+      }
+    }
+  }
 }

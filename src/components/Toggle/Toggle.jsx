@@ -1,18 +1,21 @@
-import { useTheme } from "../../context/ThemeProvider";
-import SvgIcon from "../SvgIcon/SvgIcon";
-import styles from "./Toggle.module.css";
+import styles from "./styles.module.css";
 
-const Toggle = () => {
-  const { theme, toggleTheme } = useTheme();
-
+const Toggle = ({ label, text, title, name, onChange, checked }) => {
   return (
-    <button className={styles.button} onClick={toggleTheme}>
-      {theme === "light" ? (
-        <SvgIcon icon={"lightTheme"} />
-      ) : (
-        <SvgIcon icon={"darkTheme"} />
-      )}
-    </button>
+    <>
+      <label className={styles.labelToggle}>
+        <input
+          checked={checked}
+          type="checkbox"
+          onChange={onChange}
+          className={styles.toggle}
+          name={name}
+          title={title}
+        />
+        {label}
+      </label>
+      <span className={styles.span}>{text}</span>
+    </>
   );
 };
 

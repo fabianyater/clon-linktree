@@ -17,6 +17,12 @@ main {
   width: 100%;
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .listItem {
   list-style: none;
 }

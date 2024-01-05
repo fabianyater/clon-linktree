@@ -16,7 +16,7 @@ const AddLinkForm = ({ setLinks }) => {
     const urlName = getNameFromUrl(url);
     const icon = await fetchIcon(urlName);
 
-    const newLink = { name: urlName, icon, path: url };
+    const newLink = { name: urlName, icon, path: url, isVisible: true };
 
     setLinks((previousLinks) => {
       const updatedLinks = [newLink, ...previousLinks];

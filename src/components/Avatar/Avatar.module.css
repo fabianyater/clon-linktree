@@ -3,8 +3,8 @@
 }
 
 .image{
-  width: 190PX;
-  height: 190PX;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   object-fit: cover;
 }

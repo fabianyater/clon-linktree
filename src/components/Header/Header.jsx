@@ -1,11 +1,17 @@
+import { useTheme } from "../../context/ThemeProvider";
 import { Avatar } from "../Avatar/Avatar";
-import Toggle from "../Toggle/Toggle";
+import SvgIcon from "../SvgIcon/SvgIcon";
+import ToggleTheme from "../ToggleTheme/ToggleTheme";
 import styles from "./Header.module.css";
 
 const Header = () => {
+  const { theme } = useTheme()
   return (
     <header className={styles.header}>
-      <Toggle />
+      <div className={styles.options} data-theme={theme}>
+        <ToggleTheme />
+        <SvgIcon icon="share" />
+      </div>
       <Avatar />
     </header>
   );
